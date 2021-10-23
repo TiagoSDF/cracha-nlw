@@ -3,7 +3,7 @@
   --black: hsl(240, 6%, 13%);
   --gray: hsl(240, 9%, 89%);
 }
-@media (min-width: 376px) {
+@media (min-width: 426px) {
   html,
   body {
     height: 100%;
@@ -105,7 +105,7 @@
   }
 }
 
-@media (max-width: 375px) {
+@media (max-width: 425px) {
   .gradient {
     position: absolute;
     margin-left: 3.90625rem;
