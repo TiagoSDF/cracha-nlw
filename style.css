@@ -1,70 +1,176 @@
 * {
   margin: 0;
-}
-html,
-body {
   --black: hsl(240, 6%, 13%);
   --gray: hsl(240, 9%, 89%);
+}
+@media (min-width: 376px) {
+  html,
+  body {
+    height: 100%;
+    font-family: 'Roboto', sans-serif;
+    -webkit-font-smoothing: antialiased;
+  }
+  body {
+    display: grid;
+    place-items: center;
+    background: #121214;
+  }
+  .gradient {
+    position: absolute;
+    width: 22.375rem;
+  }
+  .broken {
+    position: absolute;
+    background: #121214;
+    width: 6.25rem;
+    height: 0.75rem;
+    margin-left: 8.3rem;
+    margin-top: 1.5rem;
+    border-radius: 1.5rem;
+  }
 
-  height: 100%;
-  font-family: 'Roboto', sans-serif;
-  -webkit-font-smoothing: antialiased;
-}
-body {
-  display: grid;
-  place-items: center;
-}
-main {
-  background: url(img/background.svg);
-  width: 375px;
-  height: 812px;
-}
-.container {
-  max-width: 250px;
-  margin: auto;
-  text-align: center;
-  color: var(--gray);
-}
-.avatar {
-  width: 10rem;
-  margin: 11.5rem auto 0;
-  position: relative;
-}
-.avatar span {
-  position: absolute;
-  top: -15px;
-  z-index: 1;
-}
-.avatar > img {
-  width: 10rem;
-  height: 11.5rem;
-  object-fit: cover;
+  .range {
+    position: absolute;
+    z-index: 2;
+    width: 5rem;
+    height: 46.875rem;
+    background: linear-gradient(161.24deg, #ff008e 60%, #ffcd1e);
+    top: 0;
+    margin-top: -45rem;
+    margin-left: 8.9rem;
+  }
+  main {
+    background: url(img/background.svg);
+    width: 375px;
+    height: 812px;
+  }
+  .container {
+    max-width: 250px;
+    margin: auto;
+    text-align: center;
+    color: var(--gray);
+  }
+  .avatar {
+    width: 10rem;
+    margin: 11.5rem auto 0;
+    position: relative;
+  }
+  .avatar span {
+    position: absolute;
+    top: -15px;
+    z-index: 1;
+  }
+  .avatar > img {
+    width: 10rem;
+    height: 11.5rem;
+    object-fit: cover;
 
-  clip-path: polygon(50% 0, 100% 25%, 100% 75%, 51% 100%, 0 75%, 0 25%);
-}
-h1 {
-  font-size: 1.5rem;
-  margin-top: 1.5rem;
-  text-align: center;
-}
-a {
-  color: var(--gray);
-  text-decoration: none;
-  margin-top: 0.25rem;
-  display: flex;
-  gap: 0.75rem;
-  justify-content: center;
-  align-items: center;
+    clip-path: polygon(50% 0, 100% 25%, 100% 75%, 51% 100%, 0 75%, 0 25%);
+  }
+  h1 {
+    font-size: 1.5rem;
+    margin-top: 1.5rem;
+    text-align: center;
+  }
+  a {
+    color: var(--gray);
+    text-decoration: none;
+    margin-top: 0.25rem;
+    display: flex;
+    gap: 0.75rem;
+    justify-content: center;
+    align-items: center;
+  }
+  a :hover {
+    color: yellow;
+  }
+
+  p {
+    margin-top: 2rem;
+  }
+  ul {
+    margin-top: 4rem;
+    list-style: none;
+    padding: 0px;
+    display: flex;
+    gap: 0.5rem;
+    justify-content: center;
+  }
+  ul a {
+    transition: 0.6s;
+  }
+
+  ul a:hover {
+    transform: translateY(-8px);
+  }
 }
 
-p {
-  margin-top: 2rem;
-}
-ul {
-  margin-top: 4rem;
-  list-style: none;
-  padding: 0px;
-  display: flex;
-  gap: 0.5rem;
-  justify-content: center;
+@media (max-width: 375px) {
+  .gradient {
+    position: absolute;
+    margin-left: 3.90625rem;
+  }
+  .broken {
+    position: absolute;
+  }
+
+  .range {
+    position: absolute;
+  }
+  main {
+    background: url(img/background.svg) no-repeat center/cover;
+    min-width: 375px;
+    width: 100vw;
+    min-height: 812px;
+    height: 100vh;
+  }
+  .container {
+    max-width: 250px;
+    margin: auto;
+    text-align: center;
+    color: var(--gray);
+  }
+  .avatar {
+    width: 10rem;
+    margin: 11.5rem auto 0;
+    position: relative;
+  }
+  .avatar span {
+    position: absolute;
+    top: -15px;
+    z-index: 1;
+  }
+  .avatar > img {
+    width: 10rem;
+    height: 11.5rem;
+    object-fit: cover;
+
+    clip-path: polygon(50% 0, 100% 25%, 100% 75%, 51% 100%, 0 75%, 0 25%);
+  }
+  h1 {
+    font-size: 1.5rem;
+    margin-top: 1.5rem;
+    text-align: center;
+  }
+  a {
+    color: var(--gray);
+    text-decoration: none;
+    margin-top: 0.25rem;
+    display: flex;
+    gap: 0.75rem;
+    justify-content: center;
+    align-items: center;
+  }
+
+  p {
+    margin-top: 2rem;
+  }
+  ul {
+    margin-top: 4rem;
+    list-style: none;
+    padding: 0px;
+    display: flex;
+    gap: 0.5rem;
+    justify-content: center;
+  }
 }
